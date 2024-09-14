@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 <a href="${serviceAreaUrl}" class="nav-small-link w-inline-block">
                     <div class="nav-link-text">
                         <div class="button-text-wrapper">
-                            <div class="button-text">View all ${viewAllText}</div>
+                            <div class="button-text">View All ${viewAllText}</div>
                         </div>
                     </div>
                 </a>`;
