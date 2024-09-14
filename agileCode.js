@@ -127,6 +127,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log("I LAODED");
     var lastScrollTop = 0;
     var navbar = document.getElementById('navigation-bar');
     var dropdowns = document.querySelectorAll('.w-dropdown-toggle[aria-expanded="true"]');
