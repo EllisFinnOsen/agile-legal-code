@@ -1,4 +1,3 @@
-// Page Animations:
 
 window.addEventListener("DOMContentLoaded", (event) => {
     // Split text into spans for text animations
@@ -90,4 +89,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
   
     // Avoid flash of unstyled content
     gsap.set("[text-split]", { opacity: 1 });
-  });
+});
