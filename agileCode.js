@@ -2,31 +2,31 @@ window.addEventListener('DOMContentLoaded', function() {
     jQuery(function() {
         // Reinitialize Webflow interactions
         function reinitializeWebflowInteractions() {
-            console.log('Reinitializing Webflow interactions...');
+            //console.log('Reinitializing Webflow interactions...');
             Webflow.require('ix2').init();
         }
 
         // Replace dropdowns with a static link if there's only one subservice
         function handleSingleSubservice() {
-            console.log('Checking for single subservice...');
+            //console.log('Checking for single subservice...');
 
             jQuery('.service-drop-down').each(function() {
                 var $dropdown = jQuery(this);
                 var $subserviceList = $dropdown.find('.subservice-list');
 
-                console.log('Subservice list element:', $subserviceList);
+                //console.log('Subservice list element:', $subserviceList);
 
                 var $subservices = $subserviceList.find('.nav-small-link.is-sub');
-                console.log('Subservices found:', $subservices.length);
+                //console.log('Subservices found:', $subservices.length);
 
                 // If there is only one subservice, replace the dropdown
                 if ($subservices.length === 1) {
-                    console.log('Only one subservice found. Replacing with a static link...');
+                    //console.log('Only one subservice found. Replacing with a static link...');
 
                     var singleSubserviceUrl = $subservices.attr('href');
                     var singleSubserviceText = $subservices.find('.button-text').text();
-                    console.log('Single subservice URL:', singleSubserviceUrl);
-                    console.log('Single subservice text:', singleSubserviceText);
+                    //console.log('Single subservice URL:', singleSubserviceUrl);
+                    //console.log('Single subservice text:', singleSubserviceText);
 
                     if (singleSubserviceUrl && singleSubserviceUrl !== "#") {
                         var staticLinkHtml = `
@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </a>`;
 
-                        console.log('Replacing dropdown with static link:', staticLinkHtml);
+                        //console.log('Replacing dropdown with static link:', staticLinkHtml);
 
                         // Replace the dropdown with the static link
                         $dropdown.replaceWith(staticLinkHtml);
@@ -59,11 +59,11 @@ window.addEventListener('DOMContentLoaded', function() {
                 var $footerLink = jQuery(this);
                 var footerLinkText = $footerLink.find('.button-text-2').text().trim();
 
-                console.log('Checking footer link:', footerLinkText);
+                //console.log('Checking footer link:', footerLinkText);
 
                 // If the footer link text matches the service area text, update the href
                 if (footerLinkText === serviceText) {
-                    console.log('Updating footer link to URL:', serviceUrl);
+                    //console.log('Updating footer link to URL:', serviceUrl);
                     $footerLink.attr('href', serviceUrl);
                 }
             });
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         // Add "View all {Area Name}" link after subservice lists are loaded
         function addViewAllLink(serviceAreaName, serviceAreaUrl, $container) {
-            console.log(`Adding "View all ${serviceAreaName}" link...`);
+            //console.log(`Adding "View all ${serviceAreaName}" link...`);
 
             // Check if "Services" is already in the name to avoid redundancy
             var viewAllText = serviceAreaName.endsWith('Services') ? serviceAreaName : `${serviceAreaName} Services`;
@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function() {
             // Append the "View all" link to the subservice list container (after the subservice items)
             $container.append(viewAllLinkHtml);
 
-            console.log(`"View all ${viewAllText}" link added.`);
+            //console.log(`"View all ${viewAllText}" link added.`);
         }
 
         // Load subservice lists dynamically
@@ -101,11 +101,11 @@ window.addEventListener('DOMContentLoaded', function() {
                 var serviceAreaName = jQuery(`#name-${serviceAreaSlug}`).text().trim();
                 var serviceAreaUrl = `/service-area/${serviceAreaSlug}`;
                 
-                console.log('Loading subservices for:', serviceAreaSlug);
+                //console.log('Loading subservices for:', serviceAreaSlug);
 
                 // Load the subservices from the correct container
                 $this.load(`/service-area/${serviceAreaSlug} .subservice-list`, function() {
-                    console.log('Subservices loaded for:', serviceAreaSlug);
+                    //console.log('Subservices loaded for:', serviceAreaSlug);
 
                     // After loading the subservices, check for single subservice and replace dropdown
                     handleSingleSubservice();
@@ -127,7 +127,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("I LAODED");
+    console.log("I LOADED");
     var lastScrollTop = 0;
     var navbar = document.getElementById('navigation-bar');
     var dropdowns = document.querySelectorAll('.w-dropdown-toggle[aria-expanded="true"]');
