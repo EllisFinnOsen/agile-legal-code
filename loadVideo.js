@@ -6,14 +6,14 @@ function delayedLoadVideo() {
     // Function to load the desktop video
     function loadDesktopVideo() {
         if (!desktopWrapper.innerHTML) {
-            desktopWrapper.innerHTML = '<iframe src="https://player.vimeo.com/video/1008099164?background=1&amp;quality=1080p" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>';
+            desktopWrapper.innerHTML = '<iframe src="https://player.vimeo.com/video/1009508858?background=1&amp;quality=1080p" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>';
         }
     }
 
     // Function to load the mobile video
     function loadMobileVideo() {
         if (!mobileWrapper.innerHTML) {
-            mobileWrapper.innerHTML = '<iframe src="https://player.vimeo.com/video/1008099406?background=1&amp;quality=1080p" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>';
+            mobileWrapper.innerHTML = '<iframe src="https://player.vimeo.com/video/1009508905?background=1&amp;quality=1080p" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>';
         }
     }
 
