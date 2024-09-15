@@ -1,6 +1,6 @@
 waitless.scripts.push(
     {
-        src: 'https://path-to-your-script.js', 
+        src: '', 
         location: 'body', 
         callback: customScriptLoaded 
     }
