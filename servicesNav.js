@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+(function () {
     jQuery(function() {
         let lastScrollY = 0;
         let scheduledAnimationFrame = false;
@@ -103,4 +103,4 @@ window.addEventListener('DOMContentLoaded', function() {
         // Initialize the dynamic loading and subservice handling on page load
         debounceLoadSubservices();
     });
-});
+})();
