@@ -1,14 +1,12 @@
-(function() {
-    // Check if the DOM is already loaded, if so, run the code immediately.
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        initServicesNav();
-    } else {
-        // If not, set up a DOMContentLoaded listener.
-        document.addEventListener('DOMContentLoaded', initServicesNav);
-    }
+(function(global) {
+    // Initialize the module
+    const servicesNav = {
+        init: initServicesNav
+    };
 
+    // Main initialization function
     function initServicesNav() {
-        console.log('servicesNav.js: DOM fully loaded, initializing...');
+        console.log('servicesNav.js: Initializing service navigation...');
 
         jQuery(function() {
             let lastScrollY = 0;
@@ -115,4 +113,14 @@
             debounceLoadSubservices();
         });
     }
-})();
+
+    // Expose the module globally
+    global.servicesNav = servicesNav;
+
+    // Automatically initialize on DOMContentLoaded or first interaction
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        servicesNav.init();
+    } else {
+        document.addEventListener('DOMContentLoaded', servicesNav.init);
+    }
+})(this);
