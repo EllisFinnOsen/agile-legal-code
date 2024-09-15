@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", (event) => {
     // Split text into spans for text animations
     let typeSplit = new SplitType("[text-split]", {
