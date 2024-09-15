@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+(function () {
     const dynamicList = document.querySelector('.resources-collection-list');
 
     // Function to debounce and batch DOM updates in requestAnimationFrame
@@ -34,4 +34,4 @@ window.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Dynamic list '.resources-collection-list' not found!");
     }
-});
+})();
