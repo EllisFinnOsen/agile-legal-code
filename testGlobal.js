@@ -1,12 +1,13 @@
+// No external script source needed, so we just run the logic in the callback directly
 waitless.scripts.push(
     {
-        src: '', 
+        src: '', // No need to load an external script, leaving this empty
         location: 'body', 
         callback: customScriptLoaded 
     }
 );
 
-// This function is the callback that will run after your script has been dynamically loaded
+// This function is the callback that will run the logic directly
 function customScriptLoaded() {
     console.log('Custom script loaded and callback is triggered.');
 
