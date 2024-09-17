@@ -3,7 +3,7 @@
 // Push the scripts you need to load, including servicesNav.js
 waitless.scripts.push(
     { 
-        src: 'https://raw.githubusercontent.com/ellisfinnosen/agile-legal-code/main/servicesNav.js?v=1', 
+        src: '', 
         location: 'body', 
         callback: servicesNavLoaded // callback to run after servicesNav.js is loaded
     }
