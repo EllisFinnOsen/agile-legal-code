@@ -1,14 +1,5 @@
 // Assuming `waitless` has been properly initialized in the page, extend it with servicesNav.js functionality
 
-// Push the scripts you need to load, including servicesNav.js
-waitless.scripts.push(
-    { 
-        src: '', 
-        location: 'body', 
-        callback: servicesNavLoaded // callback to run after servicesNav.js is loaded
-    }
-);
-
 // Add any functions you want to execute after all the scripts have loaded
 waitless.functions.push(function() {
     console.log('servicesNav.js and other functions are ready to execute after interaction or delay.');
