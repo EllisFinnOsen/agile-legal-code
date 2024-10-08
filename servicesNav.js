@@ -87,20 +87,30 @@ function initializeServicesNav() {
 
   // Load subservice lists dynamically
   function loadSubservices() {
+    console.log("Loading subservices dynamically...");
     jQuery(".is-area-tag").each(function () {
       var $this = jQuery(this);
       var serviceAreaSlug = $this.attr("id").replace("area-", "");
       var serviceAreaName = jQuery(`#name-${serviceAreaSlug}`).text().trim();
       var serviceAreaUrl = `/service-area/${serviceAreaSlug}`;
-
+  
+      console.log("Loading subservices for area:", serviceAreaName, "with slug:", serviceAreaSlug);
+  
       $this.load(
         `/service-area/${serviceAreaSlug} .subservice-list`,
         function () {
-          handleSingleSubservice();
-
+          console.log("Subservice list loaded for area:", serviceAreaName);
           var $collectionList = $this.find(".collection-list-3");
-          addViewAllLink(serviceAreaName, serviceAreaUrl, $collectionList);
-          console.log("Adding View All Link"+ serviceAreaName + serviceAreaUrl + $collectionList )
+  
+          // Check if the collection list is found
+          if ($collectionList.length > 0) {
+            console.log("Collection list found:", $collectionList);
+            addViewAllLink(serviceAreaName, serviceAreaUrl, $collectionList);
+          } else {
+            console.warn("No collection list found for area:", serviceAreaName);
+          }
+  
+          handleSingleSubservice();
         }
       );
     });
