@@ -100,6 +100,7 @@ function initializeServicesNav() {
 
           var $collectionList = $this.find(".collection-list-3");
           addViewAllLink(serviceAreaName, serviceAreaUrl, $collectionList);
+          console.log("Adding View All Link"+ serviceAreaName + serviceAreaUrl + $collectionList )
         }
       );
     });
