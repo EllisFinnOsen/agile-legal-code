@@ -1,0 +1,123 @@
+/* Instructions Popup */
+.instructions-element {
+  display: flex !important;
+  opacity: 0 !important;
+  pointer-events: auto !important;
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.instructions-element.hidden-instructions {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 
+
+
+
+
+#is-instructions {
+    display: flex !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+}
+
+#is-instructions.is-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+</style>
+
+<style>
+
+.instructions-element {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease-in-out !important;
+}
+
+.instructions-element.hidden-instructions {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+
+*/
+
+/* CSS FROM Total Offering Amount Field*/
+
+.ms-input-label-2 {
+  color: #121331;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.ms-input-wrap {
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.ms-input {
+  color: #121331;
+  background-color: #fff;
+  border: 1px solid #12133140;
+  border-radius: 5px;
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  box-shadow: 0 5px 10px -5px #0000001a;
+}
+
+.ms-input:hover {
+  z-index: 2;
+  box-shadow: none;
+  border-color: #3e8870;
+}
+
+.ms-input:focus {
+  z-index: 2;
+  box-shadow: none;
+  border-color: #3e8870;
+}
+
+.ms-input::placeholder {
+  color: #909090;
+}
+
+.ms-input.has-left-icon {
+  padding-left: 38px;
+}
+
+.ms-dropdown {
+  z-index: 10;
+  background-color: #0000;
+  border: 0 solid #000;
+  width: 70px;
+  height: 40px;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: none;
+  position: absolute;
+  inset: 0% 6px 0% auto;
+}
+
+.ms-svg {
+  z-index: 3;
+  color: #12133140;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  inset: 10px auto auto 10px;
+}
+
+.ms-toggle-checkbox:checked ~ .ms-switch-label.dark {
+  color: #172c54;
+}
