@@ -1,14 +1,15 @@
 /* Instructions Popup */
-.instructions-element {
+/* Add this CSS to your stylesheet */
+#is-instructions {
   display: flex !important;
   opacity: 0 !important;
-  pointer-events: auto !important;
+  pointer-events: none !important;
   transition: opacity 0.3s ease-in-out !important;
 }
 
-.instructions-element.hidden-instructions {
-  opacity: 0 !important;
-  pointer-events: none !important;
+#is-instructions.is-active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 /* 
