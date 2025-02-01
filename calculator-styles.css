@@ -1,12 +1,47 @@
 /* Instructions Popup */
-#is-instructions {
+.instructions-element {
   display: flex !important;
   opacity: 0 !important;
-  pointer-events: none !important;
+  pointer-events: auto !important;
   transition: opacity 0.3s ease-in-out !important;
 }
 
-#is-instructions.is-active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
+.instructions-element.hidden-instructions {
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
+
+/* 
+
+
+
+
+#is-instructions {
+    display: flex !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+}
+
+#is-instructions.is-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+</style>
+
+<style>
+
+.instructions-element {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease-in-out !important;
+}
+
+.instructions-element.hidden-instructions {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+
+*/
