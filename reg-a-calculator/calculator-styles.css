@@ -122,3 +122,54 @@
 .ms-toggle-checkbox:checked ~ .ms-switch-label.dark {
   color: #172c54;
 }
+
+/* Editable Input styles */
+
+/* Base table cell */
+.table_cell {
+  color: #172c54;
+  padding-top: 0.025rem;
+  padding-bottom: 0.025rem;
+  padding-left: 0.5rem;
+  font-family: Sourcesanspro, sans-serif;
+  text-align: left;
+}
+
+/* Editable cells */
+.table_cell[is-input="true"] {
+  background-color: rgba(124, 197, 200, 0.3);
+  cursor: pointer;
+  border: 1px dashed #ccc;
+}
+
+.table_cell.is-editable {
+  background-color: #29588b1a;
+  border-radius: 3px;
+}
+
+/* Editing state - subtle background change */
+.table_cell.editing {
+  background-color: #dceeff; /* Light blue highlight when active */
+  outline: 2px solid #172c5480;
+}
+
+/* Input field that replaces the text */
+.editable-input {
+  font-family: Sourcesanspro, sans-serif;
+  font-size: inherit;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left; /* Fix alignment */
+  padding-left: 0.5rem; /* Match existing padding */
+  padding-right: 0.5rem;
+  color: #172c54;
+}
+
+/* Prevent number input selection issues */
+.editable-input::selection {
+  background: transparent;
+  color: #172c54;
+}
