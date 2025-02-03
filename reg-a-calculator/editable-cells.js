@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create the new question element
     const questionHtml = `
         <div class="form-block" id="additional-question">
-            <label for="is-issuer-dealer">Has the issuer obtained issuer dealer registration in NJ, TX, and WA?</label>
+            <label for="is-issuer-dealer">Has the Issuer obtained issuer dealer registration in NJ, TX, and WA?</label>
             <label class="w-checkbox ms-switch-wrap">
                 <input type="checkbox" name="is-issuer-dealer" id="is-issuer-dealer" class="w-checkbox-input ms-toggle-checkbox">
                 <span class="ms-switch-label dark w-form-label" for="is-issuer-dealer">
