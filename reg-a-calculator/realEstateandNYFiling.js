@@ -37,6 +37,16 @@ function calculateFilingFee() {
         "Real estate investment is Yes. Filing fee is set to $1950 + $150."
       );
       filingFee += 1950 + 150;
+
+      // Additional check for office location
+      if (isOfficeNY === false) {
+        console.log(
+          "Issuer's office is not in New York. Adding $35 to filing fee."
+        );
+        filingFee += 35;
+      } else {
+        console.log("Issuer's office is in New York. No additional fee.");
+      }
     }
   }
 
